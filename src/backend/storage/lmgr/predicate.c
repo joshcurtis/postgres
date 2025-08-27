@@ -3256,6 +3256,7 @@ SetNewSxactGlobalXmin(void)
 
 	PredXact->SxactGlobalXmin = InvalidTransactionId;
 	PredXact->SxactGlobalXminCount = 0;
+	pg_usleep(1000);
 
 	dlist_foreach(iter, &PredXact->activeList)
 	{
